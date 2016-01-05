@@ -40,7 +40,7 @@ module FrontEndBuilds
       params[:pubkey].slice(:name, :pubkey)
     end
 
-    def pubkey_create_params_rails_4
+    def pubkey_create_params_rails_current
       params.require(:pubkey).permit(
         :name,
         :pubkey

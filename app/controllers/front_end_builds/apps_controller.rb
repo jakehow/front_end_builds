@@ -77,7 +77,7 @@ module FrontEndBuilds
       params[:app].slice(:name)
     end
 
-    def app_create_params_rails_4
+    def app_create_params_rails_current
       params.require(:app).permit(
         :name
       )
@@ -91,7 +91,7 @@ module FrontEndBuilds
       )
     end
 
-    def app_update_params_rails_4
+    def app_update_params_rails_current
       params.require(:app).permit(
         :name,
         :require_manual_activation,

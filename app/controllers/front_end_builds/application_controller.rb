@@ -3,7 +3,11 @@ module FrontEndBuilds
 
     def use_params(param_method)
       v = Rails::VERSION::MAJOR
-      send("#{param_method}_rails_#{v}")
+      if respond_to?("#{param_method}_rails_#{v}")
+        send("#{param_method}_rails_#{v}")
+      else
+        send("#{param_method}_rails_current")
+      end
     end
 
     # Public: A quick helper to create a respond_to block for

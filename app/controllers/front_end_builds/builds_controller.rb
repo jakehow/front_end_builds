@@ -68,7 +68,7 @@ module FrontEndBuilds
       params.slice(*_create_params)
     end
 
-    def build_create_params_rails_4
+    def build_create_params_rails_current
       params.permit(*_create_params)
     end
   end

@@ -55,7 +55,7 @@ module FrontEndBuilds
       params.slice(:app_name, :id, :branch, :sha, :job)
     end
 
-    def build_search_params_rails_4
+    def build_search_params_rails_current
       params.permit(:app_name, :id, :branch, :sha, :job)
     end
   end
